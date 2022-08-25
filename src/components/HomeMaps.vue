@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{currPosName}}</h1>
-    <p>Latitude: {{ currPos.lat.toFixed(2) }}, Longitude: {{ currPos.lng.toFixed(2) }}</p>
+    <p>Latitude: {{ center.lat.toFixed(2) }}, Longitude: {{ center.lng.toFixed(2) }}</p>
 
     <GMapAutocomplete
         class="search"
@@ -36,20 +36,12 @@
 
 <script setup>
 import {reactive, ref} from 'vue';
-import {useGeolocation} from "@/useGeolocation";
-import {computed} from "vue";
 
-const { coords } = useGeolocation();
-const defaultPosName = 'Praça do Japão';
+const defaultPosName = 'Estádio Prudentão';
 const defaultPos = {
-  lat: -25.4459277,
-  lng: -49.287317,
+  lat: -22.0985498,
+  lng: -51.4170715,
 };
-
-const currPos = computed(() => ({
-  lat: coords.value.latitude,
-  lng: coords.value.longitude
-}));
 
 let currPosName = ref(defaultPosName);
 
