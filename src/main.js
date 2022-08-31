@@ -5,7 +5,7 @@ import VueGoogleMaps from '@fawmi/vue-google-maps';
 createApp(App)
     .use(VueGoogleMaps, {
         load: {
-            key: 'AIzaSyClmQc3eW7EbCocMH9cERxUAgZuWA3BDEg',
+            key: process.env.VUE_APP_MY_API_KEY,
             libraries: 'places',
         }
     })

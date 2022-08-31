@@ -1,1 +1,8 @@
 node_modules
+
+# misc
+.env
+.env.*
+.envi.local
+.env.[mode]
+.envi.[mode]local
